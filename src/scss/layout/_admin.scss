@@ -1,0 +1,40 @@
+@use 'base/variables' as v;  
+ @use 'base/mixins' as m; 
+
+ .citas {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding: 1rem; 
+        border-bottom: 1px solid v.$blanco;
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+    p {
+        font-weight: bold;
+        color: v.$azul;
+    }
+    span {
+        font-weight: v.$regular;
+        color: v.$blanco;
+    }
+
+   .servicio {
+        font-weight: v.$regular;
+        color: v.$blanco;
+    }
+
+   
+ }
+
+ .servicios {
+    @extend .citas;
+
+    .boton, .boton-eliminar {
+        margin: 0;
+    }
+ }
+
